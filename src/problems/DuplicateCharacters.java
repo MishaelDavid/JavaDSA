@@ -14,13 +14,13 @@ public class DuplicateCharacters {
             char[] ch = str.toCharArray();
             for(char c: ch ){
 
-                map.put(c,map.getOrDefault(c,0)+1);
+                map.put(c,map.getOrDefault(c,0)+1);                  //  using getOrDefault to return 0 if null
 
             }
             System.out.println("duplicate characters are");
             for(Map.Entry<Character,Integer> entry : map.entrySet()){
                 if(entry.getValue()>1){
-
+                   // System.out.println(entry);                                 ---> this also works
                     System.out.println(entry.getKey()+" : "+entry.getValue());
                 }
 
